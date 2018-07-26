@@ -20,8 +20,6 @@ export class Counter extends React.Component {
     if (this.state.timer === 0) {
       this.props.onComplete();
       clearInterval(this.counter);
-      this.setState(this.getInitialState(this.props));
-      this.onStart();
     } else {
       this.setState((prevState) => ({
         timer: prevState.timer - 1

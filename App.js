@@ -34,7 +34,7 @@ export default class App extends React.Component {
     const timer = this.timerValues[(this.state.currentTimer % 2)]
     return (
       <View style={styles.container}>
-        <Counter time={timer.time} onComplete={this.onComplete} name={timer.name}/>
+        <Counter time={timer.time} onComplete={this.onComplete} name={timer.name} key={timer.name}/>
       </View>
     );
   }
